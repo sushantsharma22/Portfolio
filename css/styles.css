@@ -275,6 +275,33 @@ body.menu-open {
   background-color: #eaeaea;
 }
 
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto; /* Adjust height for smaller screens */
+    padding: 2rem 1rem; /* Add padding for better spacing */
+  }
+
+  .hero-content {
+    max-width: 100%; /* Use full width */
+    padding: 0 1rem; /* Add padding for smaller screens */
+  }
+
+  .typewriter {
+    font-size: 2.5rem; /* Reduce font size */
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.8rem; /* Adjust subtitle size */
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-btn {
+    padding: 0.5rem 1rem; /* Adjust button size */
+    font-size: 1rem; /* Reduce font size */
+  }
+}
+
 /* ------------- SECTIONS ------------- */
 /* Base Section Styles with a Smooth Animated Gradient Background */
 .section {
@@ -413,18 +440,39 @@ body.menu-open {
 }
 
 /* Responsive Design */
+/* Responsive Design for Small Screens */
 @media (max-width: 768px) {
-  .about-section h2 {
-    font-size: 2.5rem; /* Adjust heading size for smaller screens */
+  .about-section {
+    padding: 2rem 1rem; /* Reduced padding for small screens */
   }
+
   .about-card {
-    padding: 1.5rem;
-    max-width: 90%; /* Reduce width for smaller screens */
+    max-width: 90%; /* Reduce width for better fit */
+    padding: 1.5rem; /* Smaller padding for compact layout */
+    border-radius: 8px; /* Slightly smaller border radius */
+    font-size: 1.4rem; /* Smaller font size for readability */
   }
+
+  .about-card h2 {
+    font-size: 2rem; /* Adjust heading size for small screens */
+    margin-bottom: 1.5rem; /* Reduced margin */
+  }
+
   .about-card p {
-    font-size: 1.6rem; /* Adjust font size for readability */
+    font-size: 1.2rem; /* Smaller paragraph font size */
+    line-height: 1.5; /* Adjust line spacing for small screens */
+    margin: 0.5rem 0; /* Adjust paragraph spacing */
+  }
+
+  .about-card p + p {
+    margin-top: 1rem; /* Reduced spacing between paragraphs */
+  }
+
+  .about-container {
+    flex-direction: column; /* Stack items vertically */
   }
 }
+
 
 
 

@@ -16,6 +16,7 @@ body {
 
 /* ------------- HEADER & NAV ------------- */
 
+/* Header Styling */
 .header {
   position: fixed;
   top: 0;
@@ -40,7 +41,6 @@ body {
   justify-content: space-between;
 }
 
-/* Logo */
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
@@ -92,50 +92,56 @@ body {
   color: #fff;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .header {
-    position: fixed;
-    width: 100%;
-    box-shadow: none;
-    padding: 0.5rem 1rem;
-  }
-
-  .nav-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .logo {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
-    width: 100%; /* Ensure full-width links */
-  }
-
-  .nav-links a {
-    text-align: center;
-    width: calc(100% - 2rem); /* Add spacing on both sides */
-    padding: 1rem;
-    font-size: 1.2rem; /* Increase font size for touch devices */
-    box-shadow: none; /* Remove shadow for a cleaner look */
-    background: #f9f9f9;
-  }
-
-  .nav-links a:hover {
-    background: #6e48aa;
-    color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
+/* Mobile Sidebar */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
 }
 
+.menu-icon span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+}
 
+.dark-theme .menu-icon span {
+  background: #e6e6e6;
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100%;
+  background: #f5f5f5;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 100;
+}
+
+#sidebar.active {
+  right: 0;
+}
+
+#sidebar li {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+}
 
 
 /* ------------- HERO SECTION ------------- */

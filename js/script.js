@@ -1,3 +1,11 @@
+// Sidebar Toggle for Mobile
+const menuIcon = document.getElementById('menu-icon');
+const sidebar = document.getElementById('sidebar');
+
+menuIcon.addEventListener('click', () => {
+  sidebar.classList.toggle('active');
+});
+
 
 
 // SMOOTH SCROLL

@@ -14,8 +14,6 @@ body {
 }
 
 
-/* ------------- HEADER & NAV ------------- */
-
 /* Base Header */
 .header {
   position: fixed;
@@ -42,25 +40,56 @@ body {
   justify-content: space-between;
 }
 
-/* Logo */
+/* Logo with 3D Effect */
 .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #232323;
-  text-shadow: 2px 2px 5px rgba(249, 10, 10, 0.3);
-  transition: text-shadow 0.3s, transform 0.3s;
+  font-size: 2.5rem; /* Larger font for prominence */
+  font-weight: bold; /* Bold text for emphasis */
+  background: linear-gradient(
+    90deg,
+    #ff6b6b,
+    #ff8c00,
+    #ffdd00,
+    #6bff6b,
+    #6b4fff,
+    #ff6bff,
+    #00ffff
+  ); /* Multi-color gradient */
+  background-size: 400%; /* Larger background to allow smooth transitions */
+  -webkit-background-clip: text; /* Clips gradient to text */
+  -webkit-text-fill-color: transparent; /* Makes text transparent to reveal gradient */
+  animation: gradientShift 15s infinite linear; /* Slow and smooth color shift */
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3), 
+               0px 0px 20px rgba(255, 255, 255, 0.2); /* Soft glowing effect */
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Animation for ultra-smooth gradient flow */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .logo:hover {
-  text-shadow: 3px 3px 8px rgba(231, 6, 6, 0.4);
-  transform: scale(1.05);
+  text-shadow: 3px 3px 20px rgba(255, 105, 180, 0.6), 
+               -3px -3px 20px rgba(0, 191, 255, 0.6), 
+               0px 0px 30px rgba(255, 255, 255, 0.8); /* Subtle vibrant glow on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+  cursor: pointer; /* Indicates interactivity */
 }
+
 
 /* Desktop Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .nav-links li {
@@ -97,32 +126,32 @@ body {
 /* Mobile Sidebar */
 @media (max-width: 768px) {
   .nav-links {
-    position: fixed; /* Fixed for mobile */
+    position: fixed;
     top: 0;
-    right: -100%; /* Hidden initially */
+    right: -100%;
     width: 250px;
     height: 100%;
     background-color: #f5f5f5;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-    flex-direction: column; /* Stack links vertically */
-    padding-top: 60px; /* Adjust for header height */
-    transition: right 0.3s ease; /* Smooth slide-in animation */
-    z-index: 100; /* Above content */
+    flex-direction: column;
+    padding-top: 60px;
+    transition: right 0.3s ease;
+    z-index: 100;
   }
 
   .nav-links.active {
-    right: 0; /* Show sidebar */
+    right: 0;
   }
 
   .menu-icon {
-    display: flex; /* Show hamburger menu icon */
+    display: flex;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
     position: fixed;
     top: 15px;
     right: 15px;
-    z-index: 110; /* Above sidebar */
+    z-index: 110;
   }
 
   .menu-icon span {
@@ -132,8 +161,8 @@ body {
   }
 
   .nav-links a {
-    width: 100%; /* Full width for links */
-    text-align: left; /* Align text to the left */
+    width: 100%;
+    text-align: left;
     padding: 1rem;
     color: #333;
     text-decoration: none;
@@ -247,50 +276,108 @@ body.menu-open {
 }
 
 /* ------------- SECTIONS ------------- */
-
+/* Base Section Styles with a Smooth Animated Gradient Background */
 .section {
-  width: 100%; /* Full width */
-  margin: 0; /* Remove auto-centering */
-  padding: 4rem 2rem; /* Spacious padding */
-  box-sizing: border-box; /* Ensure padding doesn't affect width */
-  background-color: #f5f5f5; /* Optional: Default light background for all sections */
+  width: 100%;
+  margin: 0;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+  /* A richer, dim pastel gradient with various light hues */
+  background: linear-gradient(120deg,
+    #e3f2fd,   /* Light Blue */
+    #d0f0c0,   /* Light Green */
+    #fff3e0,   /* Light Yellow */
+    #f3e5f5,   /* Soft Pink/Lavender */
+    #ede7f6,   /* Light Lavender */
+    #e8f5e9,   /* Pale Mint */
+    #ffebee,   /* Light Pink */
+    #f0f8ff    /* Alice Blue */
+  );
+  background-size: 400% 400%; /* Ensures a big enough gradient for smooth transitions */
+  animation: gradientBG 25s ease infinite; /* Slow, smooth background animation */
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.5s ease, padding 0.5s ease; /* Smooth transition when properties change */
 }
 
-@media (max-width: 768px) {
-  .section {
-    padding: 2rem 1rem; /* Compact padding for smaller screens */
+/* Smooth Background Animation */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
-
+/* Section Headings with Smooth Transition Effects */
 .section h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 2rem;
   text-align: center;
   font-weight: 700;
   letter-spacing: 1px;
-  color: inherit;
+  color: #2c3e50;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  transition: color 0.5s ease, text-shadow 0.5s ease; /* Smooth changes on hover or state change */
 }
 
+/* Example Hover Effect for Headings (Optional) */
+.section h2:hover {
+  color: #1a2533; /* Slightly darker for a smooth hover effect */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Adjustments for Sections */
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem 1rem;
+    transition: padding 0.5s ease;
+  }
+  .section h2 {
+    font-size: 2rem;
+    transition: font-size 0.5s ease;
+  }
+}
+
+
+
+
 /* ------------- ABOUT SECTION ------------- */
-/* About Section */
+/* About Me Section */
 .about-section {
-  max-width: none;
-  width: 100%;
-  margin: 0;
   padding: 4rem 2rem;
-  background: linear-gradient(to right, #f5f5f5, #ffffff); /* Soft gradient background */
+  text-align: center;
 }
 
 .about-card {
-  padding: 2rem;
-  background: #f9f9f9; /* Light background for the card */
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   max-width: 1100px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent for readability */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  color: #333; /* Darker text inside the card for readability */
 }
+
+.about-card h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for emphasis */
+}
+
+.about-card p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  text-align: left;
+  margin: 1rem 0;
+}
+
+
 
 .about-card:hover {
   transform: scale(1.02); /* Slight zoom */
@@ -468,7 +555,7 @@ body.menu-open {
 
 /* Section Heading */
 .experience-section h2 {
-  font-size: 3rem; /* Bold and prominent */
+  font-size: 4rem; /* Bold and prominent */
   text-align: center;
   font-weight: 800;
   color: #333;
@@ -524,100 +611,109 @@ body.menu-open {
 
 
 /* ------------- PROJECTS SECTION ------------- */
-/* Projects Section Styling */
 .projects-section {
-  width: 100%; /* Full width for the section */
+  width: 100%;
   margin: 0;
-  padding: 4rem 2rem; /* Spacious padding for outer container */
-  background-color: #f5f5f5; /* Match the site's background color */
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+  background: linear-gradient(120deg, #e3f2fd, #f3e5f5, #ede7f6, #e8f5e9, #fff3e0, #ffebee); /* Matching gradient */
+  background-size: 400% 400%; /* Smooth transitions */
+  animation: gradientBG 25s ease infinite; /* Unified animation for consistency */
+  color: #333; /* Neutral text color */
 }
 
+/* Projects Section Container */
 .projects-container {
-  max-width: 1100px; /* Inner width control */
-  margin: 0 auto; /* Center the container */
+  max-width: 1100px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns for larger screens */
-  gap: 2rem; /* Space between project items */
+  grid-template-columns: repeat(2, 1fr); /* Two columns for desktop */
+  gap: 2rem; /* Space between items */
 }
 
+/* Individual Project Card Styling */
 .project-item {
-  padding: 2rem; /* Consistent padding for items */
-  background: #fff; /* Light background for contrast */
-  border-radius: 8px; /* Rounded corners for a modern look */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 2rem;
+  background: linear-gradient(120deg, #ffffff, #f9f9f9); /* Subtle gradient for cards */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
   transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
 }
 
 .project-item:hover {
-  transform: scale(1.02); /* Slight zoom effect on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+  transform: scale(1.02); /* Slight zoom on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
 }
 
+/* Project Title Styling */
 .project-item h3 {
-  font-size: 1.8rem; /* Prominent project titles */
-  color: #333; /* Match the site's text color */
-  margin-bottom: 1rem;
+  font-size: 2rem;
   font-weight: bold;
+  color: #222; /* Neutral text color */
+  margin-bottom: 1rem;
 }
 
+/* Tech Stack Styling */
 .project-item p.tech-stack {
-  font-size: 1.2rem; /* Slightly smaller than the title */
-  color: #555; /* Subdued text color for tech stack */
+  font-size: 1.2rem;
+  color: #555;
   margin-bottom: 1rem;
 }
 
 .project-item p.tech-stack a {
-  color: #6e48aa; /* Link color for GitHub Repo */
+  color: #2563eb;
   text-decoration: none;
   font-weight: bold;
 }
 
 .project-item p.tech-stack a:hover {
-  text-decoration: underline; /* Underline on hover for clarity */
+  text-decoration: underline; /* Highlight links on hover */
 }
 
+/* Bullet Points in Project Cards */
 .project-item ul {
-  list-style: disc inside; /* Bullet style for the list */
+  list-style: disc inside;
   margin: 0;
   padding: 0;
-  line-height: 1.6; /* Proper line spacing */
+  line-height: 1.6; /* Proper spacing */
 }
 
 .project-item li {
-  margin-bottom: 0.8rem; /* Spacing between list items */
-  color: #333; /* Match the site's text color */
+  margin-bottom: 0.8rem;
+  color: #333;
 }
 
 .project-item li strong {
-  font-weight: 600; /* Emphasize key points */
-  color: #6e48aa; /* Highlight key points */
+  font-weight: 600;
+  color: #2563eb; /* Subtle highlight */
 }
 
-/* Section Heading */
+/* Projects Section Heading */
 .projects-section h2 {
-  font-size: 4rem; /* Large heading size */
-  text-align: center; /* Center-align */
-  font-weight: 800; /* Bold for emphasis */
-  color: #333; /* Dark text color */
-  margin-bottom: 3rem; /* Spacing below the heading */
-  letter-spacing: 1.5px; /* Slightly increased spacing */
+  font-size: 2.5rem; /* Match section headings */
+  text-align: center;
+  font-weight: 700;
+  color: #2c3e50; /* Unified heading color */
+  margin-bottom: 3rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
-/* Responsive Adjustments */
+/* Responsive Adjustments for Projects Section */
 @media (max-width: 768px) {
   .projects-container {
-    grid-template-columns: 1fr; /* Stack items vertically */
-    gap: 1.5rem; /* Adjust spacing for smaller screens */
+    grid-template-columns: 1fr; /* Stack vertically for smaller screens */
+    gap: 1.5rem;
   }
 
   .projects-section h2 {
-    font-size: 2.5rem; /* Slightly smaller heading for mobile */
+    font-size: 2rem; /* Adjust heading size */
   }
 
   .project-item {
-    padding: 1.5rem; /* Adjust padding for smaller screens */
+    padding: 1.5rem; /* Compact padding */
   }
 }
+
 
 
 
@@ -707,91 +803,81 @@ body.menu-open {
 
 /* ------------- CERTIFICATIONS & TRAINING ------------- */
 
-/* Certifications Section */
+/* Certifications Section Styling */
 .certifications-section {
-  max-width: none;
-  width: 100%;
-  margin: 0;
-  padding: 4rem 2rem;
+  width: 100%; /* Full width of the page */
+  margin: 0; /* Remove outer margins */
+  padding: 4rem 2rem; /* Spacious padding */
+  background-color: #f5f5f5; /* Match the site's background color */
 }
 
+/* Grid Container for Inner Content */
+.cert-grid {
+  max-width: 1100px; /* Centered and constrained width */
+  margin: 0 auto; /* Center the inner container */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns for larger screens */
+  gap: 2rem; /* Space between items */
+}
+
+/* Individual Cards */
+.cert-item {
+  padding: 1.5rem; /* Consistent padding */
+  background: #fff; /* Light background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+}
+
+.cert-item:hover {
+  transform: scale(1.02); /* Slight zoom effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+}
+
+/* Section Heading */
 .certifications-section h2 {
-  font-size: 4rem;
-  text-align: center;
-  font-weight: 800;
-  color: #333;
-  margin-bottom: 3rem;
-  letter-spacing: 1.5px;
+  font-size: 4rem; /* Bold and prominent */
+  text-align: center; /* Center-align for readability */
+  font-weight: 800; /* Strong emphasis */
+  color: #333; /* Dark text color */
+  margin-bottom: 3rem; /* Space below the heading */
+  letter-spacing: 1.5px; /* Slight spacing for elegance */
 }
 
-/* Hover Effects for Skills Category */
-.skills-category {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skills-category:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Transition for Links */
-.skills-category a {
-  color: #333;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.skills-category a:hover {
-  color: #6e48aa;
-}
-
-/* Certification List Styling */
-.cert-list {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem;
-  background: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  list-style: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cert-list:hover {
-  transform: translateY(-5px); /* Lift the entire list on hover */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for hover */
-}
-
-.cert-list li {
-  margin-bottom: 1.5rem; /* Add spacing for better readability */
-  font-size: 1.5rem;
-  color: #333;
-}
-
-.cert-list li strong {
+/* Card Headings */
+.cert-item strong {
+  font-size: 1.5rem; /* Bold and readable */
+  margin-bottom: 1rem;
   font-weight: bold;
-  color: #6e48aa;
+  color: #6e48aa; /* Consistent with the site's primary color */
+  display: block;
 }
 
-.cert-list li a {
-  color: #007bff;
+/* Credential Links */
+.cert-item a {
+  color: #007bff; /* Primary link color */
   text-decoration: none;
-  font-weight: 600; /* Slightly bolder links */
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover transitions */
+  font-weight: 600;
 }
 
-.cert-list li a:hover {
+.cert-item a:hover {
   text-decoration: underline;
   color: #0056b3; /* Darker blue for hover state */
-  transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
-/* Button-Like Hover Effect for List Items */
-.cert-list li:hover {
-  background: #f1f1f1; /* Subtle background change on hover */
-  border-radius: 6px; /* Rounded corners for hover effect */
-  transition: background 0.3s ease;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .cert-grid {
+    grid-template-columns: 1fr; /* Stack items vertically */
+    gap: 1.5rem; /* Adjust spacing for smaller screens */
+  }
+
+  .certifications-section h2 {
+    font-size: 2.5rem; /* Slightly smaller on mobile */
+  }
 }
+
+
 
 /* ------------- EDUCATION SECTION ------------- */
 
@@ -828,7 +914,7 @@ body.menu-open {
 
 /* Section Heading */
 .education-section h2 {
-  font-size: 3rem; /* Bold and prominent */
+  font-size: 4rem; /* Bold and prominent */
   text-align: center; /* Center-align for readability */
   font-weight: 800; /* Strong emphasis */
   color: #333; /* Dark text color */

@@ -119,9 +119,9 @@ body {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
-    position: fixed;
-    top: 15px;
-    right: 15px;
+    position: absolute; /* Position relative to the header */
+    top: 15px; /* Vertically align */
+    right: 15px; /* Align with the edge */
     z-index: 110; /* Above sidebar */
   }
 
@@ -148,10 +148,6 @@ body {
   }
 }
 
-/* Prevent Body Scroll When Menu is Open */
-body.menu-open {
-  overflow: hidden;
-}
 
 
 

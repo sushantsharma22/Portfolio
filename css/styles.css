@@ -16,7 +16,6 @@ body {
 
 /* ------------- HEADER & NAV ------------- */
 
-/* Header Styling */
 .header {
   position: fixed;
   top: 0;
@@ -41,6 +40,7 @@ body {
   justify-content: space-between;
 }
 
+/* Logo */
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
@@ -92,56 +92,61 @@ body {
   color: #fff;
 }
 
-/* Mobile Sidebar */
-.menu-icon {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-.menu-icon span {
-  width: 25px;
-  height: 3px;
-  background: #333;
-}
-
-.dark-theme .menu-icon span {
-  background: #e6e6e6;
-}
-
-#sidebar {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 250px;
-  height: 100%;
-  background: #f5f5f5;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-  transition: right 0.3s ease;
-  z-index: 100;
-}
-
-#sidebar.active {
-  right: 0;
-}
-
-#sidebar li {
-  text-align: center;
-  margin: 1rem 0;
-}
-
+/* Mobile Responsiveness */
+/* Sidebar Navigation for Mobile */
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
+    position: fixed; /* Make the sidebar fixed */
+    top: 0;
+    right: -100%; /* Initially hidden */
+    width: 250px;
+    height: 100%;
+    background-color: #f5f5f5;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease; /* Smooth slide-in animation */
+    z-index: 100;
+  }
+
+  .nav-links.active {
+    right: 0; /* Slide in when active */
   }
 
   .menu-icon {
-    display: flex;
+    display: flex; /* Show hamburger menu icon on mobile */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 110; /* Ensure it's above the sidebar */
+  }
+
+  .menu-icon span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+  }
+
+  .nav-links a {
+    width: 100%; /* Full-width links */
+    text-align: center;
+    padding: 1rem;
+    color: #333;
+    text-decoration: none;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    transition: background 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    background: #6e48aa;
+    color: #fff;
   }
 }
+
+
+
 
 
 /* ------------- HERO SECTION ------------- */

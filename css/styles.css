@@ -93,41 +93,36 @@ body {
   background: #8a61c3;
   color: #fff;
 }
-/* Ensure no horizontal scrolling issue on mobile */
-ody {
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-}
+
 /* Mobile Sidebar */
-
-
-
-/* Sidebar Navigation for Mobile */
 @media (max-width: 768px) {
   .nav-links {
-    position: fixed;
+    position: fixed; /* Fixed for mobile */
     top: 0;
-    right: -100%; /* Initially hidden */
+    right: -100%; /* Hidden initially */
     width: 250px;
     height: 100%;
     background-color: #f5f5f5;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column; /* Stack links vertically */
+    padding-top: 60px; /* Adjust for header height */
     transition: right 0.3s ease; /* Smooth slide-in animation */
-    z-index: 100;
+    z-index: 100; /* Above content */
   }
 
   .nav-links.active {
-    right: 0; /* Slide in when active */
+    right: 0; /* Show sidebar */
   }
 
   .menu-icon {
-    display: flex; /* Show hamburger menu icon on mobile */
+    display: flex; /* Show hamburger menu icon */
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
-    z-index: 110; /* Ensure it's above the sidebar */
+    position: absolute; /* Position relative to the header */
+    top: 15px; /* Vertically align */
+    right: 15px; /* Align with the edge */
+    z-index: 110; /* Above sidebar */
   }
 
   .menu-icon span {
@@ -137,8 +132,8 @@ ody {
   }
 
   .nav-links a {
-    width: 100%; /* Full-width links */
-    text-align: center;
+    width: 100%; /* Full width for links */
+    text-align: left; /* Align text to the left */
     padding: 1rem;
     color: #333;
     text-decoration: none;
@@ -152,30 +147,6 @@ ody {
     color: #fff;
   }
 }
-
-/* Header for mobile alignment */
-@media (max-width: 768px) {
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0; /* Ensure the header aligns with the screen */
-    width: 100%;
-    box-shadow: none;
-    padding: 0.5rem 1rem;
-  }
-
-  .nav-container {
-    flex-direction: row; /* Ensure items align properly */
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .logo {
-    margin-bottom: 0;
-    font-size: 1.5rem;
-  }
-}
-
 
 
 

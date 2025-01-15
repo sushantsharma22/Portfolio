@@ -428,20 +428,23 @@
     </div>
 
     <!-- Contact Form Box -->
-    <div class="contact-box">
-      <form class="contact-form" action="https://formspree.io/f/yourFormID" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
+<div class="contact-box">
+  <form id="contactForm" class="contact-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required />
 
-        <label for="emailForm">Email:</label>
-        <input type="email" id="emailForm" name="emailForm" required />
+    <label for="emailForm">Email:</label>
+    <input type="email" id="emailForm" name="emailForm" required />
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
 
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
+
+    
   </div>
 </section>
 
@@ -452,11 +455,13 @@
   <footer class="footer">
     <p>© 2025 Sushant Sharma. All rights reserved.</p>
   </footer>
-
-  <!-- JS -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="js/script.js"></script>
+  
 </body>
 </html>
+
+
 
 
   

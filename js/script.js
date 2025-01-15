@@ -1,10 +1,28 @@
-// Sidebar Toggle for Mobile
-const menuIcon = document.getElementById('menu-icon');
-const sidebar = document.getElementById('sidebar');
+document.addEventListener("DOMContentLoaded", function () {
+  const menu = document.querySelector(".nav-links");
+  const toggle = document.querySelector(".menu-toggle");
+  const links = document.querySelectorAll(".nav-links a");
 
-menuIcon.addEventListener('click', () => {
-  sidebar.classList.toggle('active');
+  // Toggle menu visibility
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("show-menu");
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+      menu.classList.remove("show-menu");
+    }
+  });
+
+  // Close menu on link click
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("show-menu");
+    });
+  });
 });
+
 
 
 

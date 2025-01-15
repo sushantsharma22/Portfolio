@@ -26,29 +26,25 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
+// Menu Icon and Sidebar
 const menuIcon = document.getElementById('menu-icon');
 const sidebar = document.getElementById('sidebar');
+const body = document.body;
 
 // Toggle Sidebar
 menuIcon.addEventListener('click', () => {
   sidebar.classList.toggle('active');
-  document.body.classList.toggle('menu-open'); // Prevent scrolling
+  body.classList.toggle('menu-open');
 });
 
-// Close Sidebar on Outside Click
-document.addEventListener('click', (event) => {
-  if (!sidebar.contains(event.target) && !menuIcon.contains(event.target)) {
+// Close Sidebar When Clicking Outside
+document.addEventListener('click', (e) => {
+  if (!menuIcon.contains(e.target) && !sidebar.contains(e.target)) {
     sidebar.classList.remove('active');
-    document.body.classList.remove('menu-open'); // Restore scrolling
+    body.classList.remove('menu-open');
   }
 });
 
-// Close Sidebar on Link Click
-const navLinks = document.querySelectorAll('.nav-links a');
-navLinks.forEach((link) => {
-  link.addEventListener('click', () => {
-    sidebar.classList.remove('active');
-    document.body.classList.remove('menu-open'); // Restore scrolling
-  });
-});
+
+
 

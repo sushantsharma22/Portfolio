@@ -287,42 +287,43 @@ body.menu-open {
 
 @media (max-width: 768px) {
   .hero-section {
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem 1rem; /* Add padding for spacing */
-    text-align: center; /* Center align text */
+    padding: 2rem 1rem;
+    text-align: center;
   }
 
   .hero-content {
-    max-width: 90%; /* Restrict width for better readability */
-    word-wrap: break-word; /* Ensure wrapping for long text */
-    text-align: center; /* Center align content */
+    max-width: 90%;
+    word-wrap: break-word;
   }
 
   .typewriter {
-    font-size: 2rem; /* Reduce font size for smaller screens */
-    line-height: 1.4; /* Adjust line spacing */
-    margin-bottom: 1rem; /* Add space below the title */
+    font-size: 2rem; /* Reduced font size */
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    overflow: visible; /* Ensures text doesn't cut off */
   }
 
   .typewriter span {
-    padding: 0 0.3rem; /* Reduce padding for smaller screens */
-    font-size: 1.8rem; /* Adjust span font size */
+    font-size: 1.8rem; /* Adjusted size for balance */
+    padding: 0 0.4rem; /* Slight padding for spacing */
   }
 
   .hero-subtitle {
-    font-size: 1.2rem; /* Adjust subtitle size for mobile */
-    margin-bottom: 1.5rem; /* Add spacing below subtitle */
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
   }
 
   .hero-btn {
-    font-size: 1rem; /* Adjust button size */
-    padding: 0.6rem 1.2rem; /* Compact padding for button */
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
   }
 }
+
 
 
 
@@ -1190,53 +1191,92 @@ body.menu-open {
 
 @media (max-width: 768px) {
   .contact-section {
-    padding: 2rem 1rem; /* Adjust padding for mobile */
+    padding: 2rem 1rem;
+    text-align: center; /* Center align everything */
   }
 
   .contact-box {
-    width: 90%; /* Restrict box width for proper alignment */
-    margin: 0 auto; /* Center the contact box */
-    padding: 1.5rem; /* Compact padding for better spacing */
-    font-size: 1.2rem; /* Adjust text size */
-    line-height: 1.6; /* Improve readability */
-    text-align: left; /* Left-align text for better readability */
+    width: 90%; /* Restrict width */
+    margin: 0 auto; /* Center the box */
+    padding: 1.5rem;
+    background: #f8f9fa; /* Keep a neutral background */
+    border-radius: 8px; /* Slight rounding for aesthetic */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-size: 1.2rem; /* Ensure consistent font size for all content */
+    line-height: 1.6;
+    text-align: left; /* Left align for readability */
   }
 
   .contact-box p {
-    margin: 0.5rem 0; /* Add spacing between lines */
-    word-wrap: break-word; /* Ensure long text wraps */
+    margin: 0.8rem 0; /* Spacing between text */
+    color: #333; /* Unified text color */
+  }
+
+  .contact-box strong {
+    font-size: 1.3rem; /* Slightly larger for emphasis */
+    font-weight: bold;
+    display: block; /* Separate each heading */
+    margin-bottom: 0.5rem; /* Add space below headings */
   }
 
   .contact-box a {
-    display: block; /* Each link occupies its own line */
-    word-wrap: break-word; /* Prevent overflow of long links */
-    font-size: 1rem; /* Adjust link font size */
-    margin-bottom: 0.5rem; /* Add spacing between links */
+    font-size: 1.2rem; /* Make links match text size */
+    color: #007bff; /* Professional blue for links */
+    word-wrap: break-word; /* Prevent overflow */
+    display: block; /* Align each link properly */
+    margin-bottom: 0.8rem; /* Space between links */
+    text-decoration: none; /* Remove underline */
+  }
+
+  .contact-box a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Underline on hover */
   }
 
   .linkedin-badge {
-    max-width: 90%; /* Restrict badge width */
-    margin: 1rem auto; /* Center the badge */
+    max-width: 90%; /* Align badge with container */
+    margin: 1.5rem auto; /* Add proper spacing above and below */
+    text-align: center;
+  }
+
+  .linkedin-badge iframe {
+    width: 100%; /* Ensure iframe resizes to fit container */
+    max-width: 400px; /* Set max width for large screens */
+    margin: 0 auto;
   }
 
   .contact-form {
-    width: 90%; /* Restrict form width */
-    margin: 0 auto; /* Center the form */
-    padding: 1rem; /* Compact padding */
-    gap: 1rem; /* Adjust spacing between form elements */
+    width: 90%; /* Keep form within container limits */
+    margin: 1.5rem auto;
+    padding: 1rem;
+    gap: 1rem; /* Space between form elements */
   }
 
   .contact-form input,
   .contact-form textarea {
-    font-size: 1rem; /* Adjust input font size */
-    padding: 0.6rem; /* Compact padding for inputs */
+    width: 100%; /* Full width for inputs */
+    font-size: 1rem;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
   }
 
   .contact-form button {
-    font-size: 1rem; /* Adjust button font size */
-    padding: 0.6rem 1.2rem; /* Adjust button padding */
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: #6e48aa;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .contact-form button:hover {
+    background: #8a61c3; /* Slightly darker on hover */
   }
 }
+
 
 
 

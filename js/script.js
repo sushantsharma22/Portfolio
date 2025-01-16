@@ -1,17 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Initialize EmailJS with your User ID
-  emailjs.init("4C3sF54IL1mmbXlkC"); // Replace with your Public Key
-  emailjs.debug = true; // Enable debugging
+  // Initialize EmailJS with your Public Key
+  emailjs.init("jz-irIxUTUQelllG5"); // Replace with your EmailJS public key
 
-  // Handle the form submission
+  // Handle form submission
   document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault(); // Prevent default form submission
 
     // Collect form data
     const formData = {
-      from_name: document.getElementById("name").value.trim(),
-      reply_to: document.getElementById("emailForm").value.trim(),
-      message: document.getElementById("message").value.trim(),
+      from_name: document.getElementById("name").value(),
+      reply_to: document.getElementById("emailForm").value(),
+      message: document.getElementById("message").value(),
     };
 
     // Validate form data
@@ -20,23 +19,24 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    console.log("Form Data:", formData); // Debugging
-
     // Send email using EmailJS
     emailjs
       .send("service_br818d5", "template_n5buerc", formData)
       .then(
         function (response) {
-          console.log("EmailJS Response:", response); // Log success response
-          alert("Message sent successfully! Thank you for reaching out.");
-          document.getElementById("contactForm").reset(); // Reset form fields
+          console.log("Success!", response.status, response.text);
+          alert("Message sent successfully!");
+          document.getElementById("contactForm").reset();
         },
         function (error) {
-          console.error("EmailJS Error:", error); // Log error response
+          console.error("Failed to send email:", error);
           alert("Failed to send message. Please try again later.");
         }
       );
   });
+});
+
+
 
   // Smooth Scroll
   const navLinks = document.querySelectorAll(".nav-links a, .hero-btn");
@@ -75,4 +75,4 @@ document.addEventListener("DOMContentLoaded", function () {
       body.classList.remove("menu-open");
     }
   });
-});
+

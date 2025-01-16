@@ -1234,7 +1234,7 @@ body.menu-open {
   }
 
   .linkedin-badge {
-    max-width: 90%; /* Align badge with container */
+    max-width: 100%; /* Align badge with container */
     margin: 1.5rem auto; /* Add proper spacing above and below */
     text-align: center;
   }

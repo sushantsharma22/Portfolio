@@ -1189,16 +1189,20 @@ body.menu-open {
   }
 
   .linkedin-badge {
-    display: block; /* Ensure it spans full width */
-    margin: 0 auto; /* Center it horizontally */
-    text-align: center; /* Center the content inside */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    display: inline-flex; /* Treat badge as a single inline-flex element */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Align content vertically */
+    margin: 1rem auto; /* Center horizontally with spacing */
+    text-align: center; /* Center text inside badge */
+    box-shadow: none; /* Remove hover container shadow */
+    padding: 0; /* Remove any extra padding */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    width: auto; /* Ensure no extra width is added */
   }
 
   .linkedin-badge:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Add shadow effect */
-    cursor: pointer; /* Indicate interactivity */
+    transform: translateY(-5px); /* Lift badge on hover */
+    cursor: pointer; /* Add pointer to indicate interactivity */
   }
 
   .contact-box {
@@ -1232,6 +1236,8 @@ body.menu-open {
     color: #0056b3; /* Darker blue on hover */
     text-decoration: underline;
   }
+}
+
 
 
 
@@ -1267,5 +1273,4 @@ body.menu-open {
   .typewriter {
     font-size: 2rem;
   }
-}
 }

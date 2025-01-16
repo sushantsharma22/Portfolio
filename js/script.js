@@ -7,6 +7,7 @@
     link.addEventListener("click", function (e) {
       e.preventDefault();
       const targetId = this.getAttribute("href");
+      
       if (targetId.startsWith("#")) {
         const targetSection = document.querySelector(targetId);
         const headerOffset = 60; // fixed header offset
@@ -20,6 +21,7 @@
       }
     });
   });
+  
 
   // Toggle Sidebar
   const menuIcon = document.getElementById("menu-icon");
@@ -38,4 +40,5 @@
       body.classList.remove("menu-open");
     }
   });
+
 

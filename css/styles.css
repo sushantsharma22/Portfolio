@@ -287,36 +287,40 @@ body.menu-open {
 
 @media (max-width: 768px) {
   .hero-section {
-    height: 100vh; /* Full-screen height */
+    height: 100vh; /* Full viewport height */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem 1rem; /* Add proper padding */
+    padding: 2rem 1rem; /* Add padding for spacing */
     text-align: center; /* Center align text */
-    overflow: hidden; /* Prevent content overflow */
   }
 
   .hero-content {
-    max-width: 90%; /* Restrict width */
-    word-wrap: break-word; /* Wrap long text */
+    max-width: 90%; /* Restrict width for better readability */
+    word-wrap: break-word; /* Ensure wrapping for long text */
+    text-align: center; /* Center align content */
   }
 
   .typewriter {
-    font-size: 1.8rem; /* Reduce font size */
-    line-height: 1.2; /* Adjust line spacing */
-    margin-bottom: 1rem;
+    font-size: 2rem; /* Reduce font size for smaller screens */
+    line-height: 1.4; /* Adjust line spacing */
+    margin-bottom: 1rem; /* Add space below the title */
+  }
+
+  .typewriter span {
+    padding: 0 0.3rem; /* Reduce padding for smaller screens */
+    font-size: 1.8rem; /* Adjust span font size */
   }
 
   .hero-subtitle {
-    font-size: 1.2rem; /* Adjust subtitle size */
-    margin-bottom: 1.5rem;
+    font-size: 1.2rem; /* Adjust subtitle size for mobile */
+    margin-bottom: 1.5rem; /* Add spacing below subtitle */
   }
 
   .hero-btn {
-    font-size: 1rem;
-    padding: 0.6rem 1rem;
-    margin-top: 1rem; /* Add spacing for better placement */
+    font-size: 1rem; /* Adjust button size */
+    padding: 0.6rem 1.2rem; /* Compact padding for button */
   }
 }
 
@@ -1186,54 +1190,54 @@ body.menu-open {
 
 @media (max-width: 768px) {
   .contact-section {
-    padding: 2rem 1rem;
+    padding: 2rem 1rem; /* Adjust padding for mobile */
   }
 
   .contact-box {
-    width: 90%; /* Restrict box width to prevent overflow */
-    margin: 0 auto; /* Center align */
-    padding: 1.5rem; /* Adjust padding */
+    width: 90%; /* Restrict box width for proper alignment */
+    margin: 0 auto; /* Center the contact box */
+    padding: 1.5rem; /* Compact padding for better spacing */
     font-size: 1.2rem; /* Adjust text size */
-    line-height: 1.5; /* Improve readability */
-    text-align: left;
+    line-height: 1.6; /* Improve readability */
+    text-align: left; /* Left-align text for better readability */
   }
 
   .contact-box p {
     margin: 0.5rem 0; /* Add spacing between lines */
-    word-wrap: break-word; /* Prevent text from breaking out */
+    word-wrap: break-word; /* Ensure long text wraps */
   }
 
   .contact-box a {
-    word-wrap: break-word; /* Break long links */
-    font-size: 1rem; /* Adjust link size */
-    display: block; /* Make each link occupy its own line */
+    display: block; /* Each link occupies its own line */
+    word-wrap: break-word; /* Prevent overflow of long links */
+    font-size: 1rem; /* Adjust link font size */
     margin-bottom: 0.5rem; /* Add spacing between links */
   }
 
   .linkedin-badge {
-    max-width: 90%; /* Restrict badge size */
-    margin: 1rem auto;
-    display: block;
+    max-width: 90%; /* Restrict badge width */
+    margin: 1rem auto; /* Center the badge */
   }
 
   .contact-form {
     width: 90%; /* Restrict form width */
-    margin: 0 auto; /* Center align the form */
-    padding: 1rem; /* Add padding */
-    gap: 1rem; /* Adjust spacing between elements */
+    margin: 0 auto; /* Center the form */
+    padding: 1rem; /* Compact padding */
+    gap: 1rem; /* Adjust spacing between form elements */
   }
 
   .contact-form input,
   .contact-form textarea {
-    font-size: 1rem; /* Adjust input text size */
-    padding: 0.6rem; /* Compact input padding */
+    font-size: 1rem; /* Adjust input font size */
+    padding: 0.6rem; /* Compact padding for inputs */
   }
 
   .contact-form button {
     font-size: 1rem; /* Adjust button font size */
-    padding: 0.6rem 1.2rem; /* Compact button size */
+    padding: 0.6rem 1.2rem; /* Adjust button padding */
   }
 }
+
 
 
 

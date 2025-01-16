@@ -302,7 +302,7 @@ body.menu-open {
   }
 
   .typewriter {
-    font-size: 1.9rem; /* Reduced font size */
+    font-size: 1.98rem; /* Reduced font size */
     line-height: 1.4;
     margin-bottom: 1rem;
     overflow: visible; /* Ensures text doesn't cut off */

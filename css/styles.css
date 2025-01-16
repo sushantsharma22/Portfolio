@@ -740,22 +740,36 @@ body.menu-open {
 }
 
 /* Bullet Points in Project Cards */
+/* Bullet Points in Project Cards */
 .project-item ul {
-  list-style: disc inside;
+  list-style: none; /* Remove default bullet */
   margin: 0;
   padding: 0;
-  line-height: 1.6; /* Proper spacing */
+  line-height: 1.6; /* Adjust line spacing for readability */
 }
 
 .project-item li {
-  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 1.5rem; /* Add space for custom bullet */
+  text-indent: 0; /* Ensure text alignment starts properly */
+  margin-bottom: 0.8rem; /* Space between bullet points */
   color: #333;
+}
+
+.project-item li::before {
+  content: "•"; /* Custom bullet */
+  position: absolute;
+  left: 0; /* Align bullet to the left */
+  color: #2563eb; /* Bullet color */
+  font-size: 1.2rem; /* Adjust bullet size */
+  line-height: 1; /* Align bullet vertically */
 }
 
 .project-item li strong {
   font-weight: 600;
-  color: #2563eb; /* Subtle highlight */
+  color: #2563eb; /* Highlight for strong text */
 }
+
 
 /* Projects Section Heading */
 .projects-section h2 {

@@ -277,30 +277,33 @@ body.menu-open {
 
 @media (max-width: 768px) {
   .hero-section {
-    height: auto; /* Adjust height for smaller screens */
-    padding: 2rem 1rem; /* Add padding for better spacing */
+    height: auto;
+    padding: 3rem 1.5rem; /* More padding for better spacing */
   }
 
   .hero-content {
-    max-width: 100%; /* Use full width */
-    padding: 0 1rem; /* Add padding for smaller screens */
+    max-width: 90%; /* Ensure text doesn't span the full screen */
+    padding: 0 1rem;
+    text-align: center;
   }
 
   .typewriter {
-    font-size: 2.5rem; /* Reduce font size */
+    font-size: 2rem; /* Reduce font size */
     margin-bottom: 1rem;
   }
 
   .hero-subtitle {
-    font-size: 1.8rem; /* Adjust subtitle size */
+    font-size: 1.5rem; /* Adjust subtitle size for smaller devices */
     margin-bottom: 1.5rem;
   }
 
   .hero-btn {
-    padding: 0.5rem 1rem; /* Adjust button size */
-    font-size: 1rem; /* Reduce font size */
+    font-size: 1rem; /* Reduce button font size */
+    padding: 0.6rem 1rem; /* Compact button padding */
+    width: auto;
   }
 }
+
 
 /* ------------- SECTIONS ------------- */
 /* Base Section Styles with a Smooth Animated Gradient Background */
@@ -443,35 +446,27 @@ body.menu-open {
 /* Responsive Design for Small Screens */
 @media (max-width: 768px) {
   .about-section {
-    padding: 2rem 1rem; /* Reduced padding for small screens */
+    padding: 2rem 1.5rem; /* Reduce padding */
   }
 
   .about-card {
-    max-width: 90%; /* Reduce width for better fit */
-    padding: 1.5rem; /* Smaller padding for compact layout */
-    border-radius: 8px; /* Slightly smaller border radius */
-    font-size: 1.4rem; /* Smaller font size for readability */
+    max-width: 95%; /* Ensure cards don't occupy the full width */
+    font-size: 1.2rem; /* Reduce text size */
+    padding: 1.5rem; /* Compact padding for better fit */
   }
 
   .about-card h2 {
-    font-size: 2rem; /* Adjust heading size for small screens */
-    margin-bottom: 1.5rem; /* Reduced margin */
+    font-size: 1.8rem; /* Adjust heading size */
+    margin-bottom: 1.5rem;
   }
 
   .about-card p {
-    font-size: 1.2rem; /* Smaller paragraph font size */
-    line-height: 1.5; /* Adjust line spacing for small screens */
-    margin: 0.5rem 0; /* Adjust paragraph spacing */
-  }
-
-  .about-card p + p {
-    margin-top: 1rem; /* Reduced spacing between paragraphs */
-  }
-
-  .about-container {
-    flex-direction: column; /* Stack items vertically */
+    font-size: 1rem; /* Smaller font for paragraphs */
+    line-height: 1.5;
+    margin: 0.5rem 0;
   }
 }
+
 
 
 
@@ -847,6 +842,32 @@ body.menu-open {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Slight shadow boost */
 }
 
+@media (max-width: 768px) {
+  .conference-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .conference-container {
+    padding: 1.5rem;
+    font-size: 1.2rem; /* Adjust font size */
+    text-align: left; /* Align text for readability */
+  }
+
+  .conference-container h3 {
+    font-size: 1.5rem; /* Smaller heading size */
+    margin-bottom: 1rem;
+  }
+
+  .conference-container p {
+    font-size: 1rem; /* Reduce text size for description */
+    line-height: 1.6;
+  }
+
+  .download-btn {
+    padding: 0.5rem 1rem; /* Compact button size */
+    font-size: 1rem;
+  }
+}
 
 
 /* ------------- CERTIFICATIONS & TRAINING ------------- */
@@ -1145,20 +1166,36 @@ body.menu-open {
 
 
 
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
+  .contact-section {
+    padding: 2rem 1.5rem; /* Reduce overall padding */
+  }
+
   .contact-box {
-    padding: 1.5rem;
+    padding: 1.5rem; /* Compact padding for boxes */
   }
 
   .contact-box p {
-    font-size: 1.4rem;
+    font-size: 1.2rem; /* Reduce paragraph font size */
+    line-height: 1.6;
   }
 
-  .contact-section h2 {
-    font-size: 3rem; /* Slightly smaller heading for mobile */
+  .contact-form {
+    gap: 1rem; /* Adjust spacing between form elements */
+    padding: 1rem; /* Compact form padding */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem; /* Adjust input font size */
+  }
+
+  .contact-form button {
+    font-size: 1rem; /* Reduce button font size */
+    padding: 0.6rem 1.2rem; /* Compact button size */
   }
 }
+
 
 
 

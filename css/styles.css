@@ -1185,104 +1185,39 @@ body.menu-open {
 @media (max-width: 768px) {
   .contact-section {
     padding: 2rem 1rem;
-    text-align: center; /* Center align everything */
+    text-align: center;
   }
 
   .contact-box {
-    width: 90%; /* Restrict width */
+    width: 100%; /* Full width */
     margin: 0 auto; /* Center the box */
     padding: 1.5rem;
-    background: #f8f9fa; /* Keep a neutral background */
-    border-radius: 8px; /* Slight rounding for aesthetic */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    font-size: 1.2rem; /* Ensure consistent font size for all content */
-    line-height: 1.6;
-    text-align: left; /* Left align for readability */
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Ensure text is centered */
   }
 
-  .contact-box p {
-    margin: 0.8rem 0; /* Spacing between text */
-    color: #333; /* Unified text color */
-  }
-
-  .contact-box strong {
-    font-size: 1.3rem; /* Slightly larger for emphasis */
-    font-weight: bold;
-    display: block; /* Separate each heading */
-    margin-bottom: 0.5rem; /* Add space below headings */
+  .contact-box p,
+  .contact-box a {
+    font-size: 1.2rem; /* Unified font size for text and links */
+    line-height: 1.5;
+    margin-bottom: 1rem; /* Spacing between elements */
   }
 
   .contact-box a {
-    font-size: 1.2rem; /* Make links match text size */
-    color: #007bff; /* Professional blue for links */
+    display: block; /* Make links block-level */
     word-wrap: break-word; /* Prevent overflow */
-    display: block; /* Align each link properly */
-    margin-bottom: 0.8rem; /* Space between links */
-    text-decoration: none; /* Remove underline */
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
   }
 
   .contact-box a:hover {
-    color: #0056b3; /* Darker blue on hover */
-    text-decoration: underline; /* Underline on hover */
+    color: #0056b3;
+    text-decoration: underline;
   }
-
-
-  .linkedin-badge {
-    max-width: 100%; /* Align badge with container */
-    margin: 1.5rem auto; 
-    justify-content: center;/* Add proper spacing above and below */
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .linkedin-badge:hover {
-    transform: translateY(-5px); /* Slight lift effect */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Add shadow effect on hover */
-    cursor: pointer; /* Change cursor to pointer for interactivity */
-  }
-
-  .contact-form {
-    width: 100%; /* Keep form within container limits */
-    margin: 1.5rem auto;
-    padding: 1rem;
-    gap: 1rem; /* Space between form elements */
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%; /* Full width for inputs */
-    font-size: 1rem;
-    padding: 0.6rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-
-  .contact-form button {
-    font-size: 1rem;
-    padding: 0.6rem 1.2rem;
-    background: #6e48aa;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .contact-form button:hover {
-    background: #8a61c3; /* Slightly darker on hover */
-  }
-}ontact-form button:hover {
-  background: #8a61c3;
 }
-
-
-
-
-
-
-
-
-
 
 
 

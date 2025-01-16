@@ -1188,37 +1188,50 @@ body.menu-open {
     text-align: center;
   }
 
+  .linkedin-badge {
+    display: block; /* Ensure it spans full width */
+    margin: 0 auto; /* Center it horizontally */
+    text-align: center; /* Center the content inside */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  }
+
+  .linkedin-badge:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    cursor: pointer; /* Indicate interactivity */
+  }
+
   .contact-box {
-    width: 100%; /* Full width */
-    margin: 0 auto; /* Center the box */
+    width: 100%;
+    margin: 0 auto;
     padding: 1.5rem;
     background: #f8f9fa;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Ensure text is centered */
+    text-align: center;
   }
 
-  .contact-box p,
-  .contact-box a {
-    font-size: 1.2rem; /* Unified font size for text and links */
-    line-height: 1.5;
-    margin-bottom: 1rem; /* Spacing between elements */
-  }
-
-  .contact-box a {
-    display: block; /* Make links block-level */
-    word-wrap: break-word; /* Prevent overflow */
-    color: #007bff;
-    text-decoration: none;
+  .contact-box strong {
+    display: block; /* Ensure heading is on its own line */
+    font-size: 1.2rem; /* Match the font size with other elements */
+    margin-bottom: 0.5rem; /* Add spacing below heading */
     font-weight: bold;
+    color: #333; /* Unified text color */
+  }
+
+  .contact-box a, .contact-box p {
+    display: block; /* Align links and text in the center */
+    font-size: 1.2rem; /* Consistent font size for all */
+    line-height: 1.5; /* Ensure proper spacing */
+    color: #007bff;
+    text-decoration: none; /* Remove underline for links */
+    margin-bottom: 1rem; /* Add spacing between elements */
   }
 
   .contact-box a:hover {
-    color: #0056b3;
+    color: #0056b3; /* Darker blue on hover */
     text-decoration: underline;
   }
-}
-
 
 
 

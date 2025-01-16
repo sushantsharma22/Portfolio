@@ -277,32 +277,35 @@ body.menu-open {
 
 @media (max-width: 768px) {
   .hero-section {
-    height: auto;
-    padding: 3rem 1.5rem; /* More padding for better spacing */
+    height: 100vh; /* Ensure it covers the full viewport */
+    padding: 2rem 1rem; /* Add padding for spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
   }
 
   .hero-content {
-    max-width: 90%; /* Ensure text doesn't span the full screen */
-    padding: 0 1rem;
+    max-width: 90%; /* Prevent text from spanning the full width */
     text-align: center;
   }
 
   .typewriter {
-    font-size: 2rem; /* Reduce font size */
+    font-size: 2rem; /* Reduce font size for smaller devices */
     margin-bottom: 1rem;
   }
 
   .hero-subtitle {
-    font-size: 1.5rem; /* Adjust subtitle size for smaller devices */
+    font-size: 1.5rem; /* Adjust subtitle size */
     margin-bottom: 1.5rem;
   }
 
   .hero-btn {
     font-size: 1rem; /* Reduce button font size */
-    padding: 0.6rem 1rem; /* Compact button padding */
-    width: auto;
+    padding: 0.6rem 1rem; /* Adjust button padding */
   }
 }
+
 
 
 /* ------------- SECTIONS ------------- */
@@ -1168,33 +1171,43 @@ body.menu-open {
 
 @media (max-width: 768px) {
   .contact-section {
-    padding: 2rem 1.5rem; /* Reduce overall padding */
+    padding: 2rem 1.5rem; /* Add padding */
   }
 
   .contact-box {
-    padding: 1.5rem; /* Compact padding for boxes */
+    padding: 1.5rem; /* Compact padding for better fit */
+    margin-bottom: 2rem; /* Add spacing between sections */
+    text-align: left; /* Align text to the left for readability */
+    font-size: 1.2rem; /* Adjust text size */
+    line-height: 1.6; /* Improve line spacing */
   }
 
   .contact-box p {
-    font-size: 1.2rem; /* Reduce paragraph font size */
-    line-height: 1.6;
+    margin: 0.5rem 0; /* Add spacing between lines */
+  }
+
+  .linkedin-badge {
+    margin: 1rem auto; /* Center LinkedIn badge */
+    max-width: 90%; /* Restrict width */
   }
 
   .contact-form {
+    padding: 1.5rem; /* Add padding to the form */
     gap: 1rem; /* Adjust spacing between form elements */
-    padding: 1rem; /* Compact form padding */
   }
 
   .contact-form input,
   .contact-form textarea {
     font-size: 1rem; /* Adjust input font size */
+    padding: 0.6rem; /* Compact padding for inputs */
   }
 
   .contact-form button {
     font-size: 1rem; /* Reduce button font size */
-    padding: 0.6rem 1.2rem; /* Compact button size */
+    padding: 0.6rem 1.2rem; /* Adjust button size */
   }
 }
+
 
 
 

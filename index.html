@@ -427,69 +427,22 @@
       </div>
     </div>
 
-    <!-- Contact Form Box -->
-
-    <div class="contact-box">
-      <form id="contactForm" class="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-    
-        <label for="emailForm">Email:</label>
-        <input type="email" id="emailForm" name="email" required />
-    
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-    
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-    
-    <script>
-      document.getElementById("contactForm").addEventListener("submit", function (e) {
-        e.preventDefault();
-    
-        const formData = {
-          name: document.getElementById("name").value.trim(),
-          email: document.getElementById("emailForm").value.trim(),
-          message: document.getElementById("message").value.trim(),
-        };
-    
-        // Replace 'YOUR_GOOGLE_APPS_SCRIPT_URL' with the URL you got from the Apps Script deployment
-        fetch("https://script.google.com/macros/s/AKfycbzWQAhJG0w1q-EYEIg71btJ5loz29z4afn-PMNByQxiwRGCCiLvsT7J6PymRbi92ajs/exec", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.success) {
-              alert("Message sent successfully!");
-              document.getElementById("contactForm").reset();
-            } else {
-              alert("Failed to send message. Please try again.");
-            }
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-            alert("Error sending message. Check your connection.");
-          });
-      });
-    </script>
       
 </div>
-</section>
+</section> 
 
   
 
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© 2025 Sushant Sharma. All rights reserved.</p>
-  </footer>
-  <script src="js/script.js"></script>
-  
+<!-- Footer -->
+<footer class="footer">
+  <p>© 2025 Sushant Sharma. All rights reserved.</p>
+</footer>
+<script src="js/script.js"></script>
+
 </body>
 </html>
+
 
 
 

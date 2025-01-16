@@ -1233,20 +1233,23 @@ body.menu-open {
     text-decoration: underline; /* Underline on hover */
   }
 
+
   .linkedin-badge {
     max-width: 100%; /* Align badge with container */
-    margin: 1.5rem auto; /* Add proper spacing above and below */
+    margin: 1.5rem auto; 
+    justify-content: center;/* Add proper spacing above and below */
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
-  .linkedin-badge iframe {
-    width: 100%; /* Ensure iframe resizes to fit container */
-    max-width: 400px; /* Set max width for large screens */
-    margin: 0 auto;
+  .linkedin-badge:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Add shadow effect on hover */
+    cursor: pointer; /* Change cursor to pointer for interactivity */
   }
 
   .contact-form {
-    width: 90%; /* Keep form within container limits */
+    width: 100%; /* Keep form within container limits */
     margin: 1.5rem auto;
     padding: 1rem;
     gap: 1rem; /* Space between form elements */

@@ -24,6 +24,24 @@
   
 
   // Toggle Sidebar
+  const menuIcon = document.getElementById("menu-icon");
+  const sidebar = document.getElementById("sidebar");
+  const body = document.body;
+
+  menuIcon.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
+    body.classList.toggle("menu-open");
+  });
+
+  // Close Sidebar When Clicking Outside
+  document.addEventListener("click", (e) => {
+    if (!menuIcon.contains(e.target) && !sidebar.contains(e.target)) {
+      sidebar.classList.remove("active");
+      body.classList.remove("menu-open");
+    }
+  });
+
+  // Toggle Sidebar
   const exploreBtn = document.querySelector(".hero-btn");
   const textArea = document.querySelector(".hero-content"); // Container for the two lines of text
   let escapeCount = 0; // Track how many times the button escapes
@@ -68,7 +86,3 @@
   
   // Add hover event listener to the button
   exploreBtn.addEventListener("mouseenter", moveButton);
-  
-  
-
-  

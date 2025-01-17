@@ -88,8 +88,15 @@ body {
   .logo {
     font-size: 1.8rem; /* Reduce font size */
     word-wrap: break-word; /* Break long text */
-    text-align: center; /* Center align the logo */
+    text-align: center; /* Ensure text is centered */
     padding: 0 1rem; /* Add padding for better spacing */
+    margin: 0 auto; /* Center the logo block */
+    display: block; /* Ensure the logo takes up full width */
+  }
+
+  /* Ensure the parent container is centered */
+  .nav-container {
+    justify-content: center; /* Center content in navigation */
   }
 }
 

@@ -84,19 +84,21 @@ body {
 }
 @media (max-width: 768px) {
   .logo {
-    font-size: 1.8rem; /* Reduce font size */
-    word-wrap: break-word; /* Break long text */
-    text-align: left; /* Ensure text is centered */
+    font-size: 1.8rem; /* Reduce font size for smaller screens */
+    word-wrap: break-word; /* Break long text if necessary */
+    text-align: left; /* Align text to the left */
     padding: 0 1rem; /* Add padding for better spacing */
-    margin: 0 auto; /* Center the logo block */
+    margin: 0; /* No auto-centering */
     display: block; /* Ensure the logo takes up full width */
   }
 
-  /* Ensure the parent container is centered */
+  /* Keep the parent container aligned */
   .nav-container {
-    justify-content: center; /* Center content in navigation */
+    justify-content: flex-start; /* Align content (logo) to the left */
+    padding-left: 1rem; /* Add padding for spacing from the edge */
   }
 }
+
 
 
 
